@@ -418,7 +418,7 @@ DisplayWindowTitleSection() {
 }
 
 ; ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ;
-MsgBox(A_ScreenDPI)
+
 UI := Gui("+AlwaysOnTop -DPIScale -MaximizeBox -MinimizeBox", "LSS - CSV Tool")
 UI.MarginX := 15
 UI.MarginY := 10
