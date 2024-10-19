@@ -24,6 +24,10 @@ The following information could be useful to keep in mind when working with the 
 
 * Previously stored data is lost if and only if the stored data labels do not match the data labels of the checked data values (e.g., if the very first line of the data file equals "Window X,Window Y,Cursor X,Cursor Y" and the concatenation of the data labels of the checked data values equals "Cursor X,Cursor Y,Pixel Color ID", then the all previously stored data is lost when performing the save operation).
 
+### Capture Tool
+
+The tool that captures the image does not capture itself during the image capture (and is therefore not visible in the saved image).
+
 ## Resources
 
 A small amount of functions have been used from the Win32 API in order to "develop" the screen and window capture functionaly. These functions can be found below where they have been ordered alphabetically in their corresponding section.
