@@ -2,6 +2,8 @@
 #SingleInstance Force
 #Warn All, MsgBox
 
+#Include "Component\GetGuiFontOptions.ahk"
+#Include "Component\GetLockFontOptions.ahk"
 #Include "Component\ToolData.ahk"
 SetTitleMatchMode(3)
 
@@ -288,7 +290,7 @@ AddDropDownList(Items) {
  */
 AddLockStateControl() {
     Control := UI.AddText("X+5 YP W30 H30 0x1 0x200 0x1000 Border")
-    Control.SetFont("S18")
+    Control.SetFont(GetLockFontOptions())
     return Control
 }
 
@@ -416,12 +418,12 @@ DisplayWindowTitleSection() {
 }
 
 ; ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ;
-
+MsgBox(A_ScreenDPI)
 UI := Gui("+AlwaysOnTop -DPIScale -MaximizeBox -MinimizeBox", "LSS - CSV Tool")
 UI.MarginX := 15
 UI.MarginY := 10
 UI.OnEvent("Close", (*) => ExitApp())
-UI.SetFont("S14", "Times New Roman")
+UI.SetFont(GetGuiFontOptions(), "Times New Roman")
 
 AddTab("Process")
 WinTitleData := DisplayWindowTitleSection()
