@@ -7,7 +7,7 @@
 
 ; ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ;
 
-UI := Gui("+AlwaysOnTop -DPIScale -MaximizeBox -MinimizeBox +ToolWindow", "LSS - Screen Capture Tool | Note: Tool will not be visible in the image.")
+UI := Gui("+AlwaysOnTop -DPIScale -MaximizeBox -MinimizeBox +ToolWindow", "LSS - Screen Capture Tool")
 UI.MarginX := 15
 UI.MarginY := 10
 UI.OnEvent("Close", (*) => ExitApp())
