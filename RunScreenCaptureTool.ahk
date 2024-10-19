@@ -11,7 +11,7 @@ UI := Gui("+AlwaysOnTop -DPIScale -MaximizeBox -MinimizeBox +ToolWindow", "LSS -
 UI.MarginX := 15
 UI.MarginY := 10
 UI.OnEvent("Close", (*) => ExitApp())
-UI.SetFont("S14", "Times New Roman")
+UI.SetFont(GetGuiFontOptions(), "Times New Roman")
 
 AddTab("Area")
 DisplayCoordinate(&TopLeftX, &TopLeftY, "Top-left")
