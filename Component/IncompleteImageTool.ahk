@@ -1,3 +1,5 @@
+#Include "GetGuiFontOptions.ahk"
+#Include "GetLockFontOptions.ahk"
 #Include "ValueLock.ahk"
 
 ; ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ;
@@ -106,7 +108,7 @@ SetPlaceholderText(Control, Placeholder) {
  */
 CreateValueLock() {
     Control := UI.AddText("X+5 YP W30 H30 0x1 0x200 0x1000 Border")
-    Control.SetFont("S18")
+    Control.SetFont(GetLockFontOptions())
     return ValueLock(Control)
 }
 
